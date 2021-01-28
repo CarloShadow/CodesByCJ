@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20210104 19:17:35.037" rpa="false">
-<suite id="s1" name="Beardsearching" source="C:\Users\CJ\Testes\mytests\beardsearching.robot">
-<test id="s1-t1" name="Fazer Cadastro">
-<kw name="Open Session" library="base" type="setup">
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201226 17:32:13.673" rpa="false">
+<suite id="s1" name="Booksy" source="c:\qaninja\twp\mytests\booksy.robot">
+<test id="s1-t1" name="Abrir app e ir para a tela principal">
+<kw name="Open Session" library="base1" type="setup">
 <kw name="Set Appium Timeout" library="AppiumLibrary">
 <doc>Sets the timeout in seconds used by various keywords.</doc>
 <arguments>
 <arg>7</arg>
 </arguments>
-<status status="PASS" starttime="20210104 19:17:35.209" endtime="20210104 19:17:35.209"></status>
+<status status="PASS" starttime="20201226 17:32:13.848" endtime="20201226 17:32:13.848"></status>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
@@ -24,75 +24,72 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>deviceName=Emulator</arg>
 <arg>app=${EXECDIR}/app/booksy.apk</arg>
 </arguments>
-<status status="PASS" starttime="20210104 19:17:35.209" endtime="20210104 19:17:48.922"></status>
+<status status="PASS" starttime="20201226 17:32:13.848" endtime="20201226 17:32:25.608"></status>
 </kw>
-<status status="PASS" starttime="20210104 19:17:35.209" endtime="20210104 19:17:48.922"></status>
+<status status="PASS" starttime="20201226 17:32:13.847" endtime="20201226 17:32:25.608"></status>
 </kw>
-<kw name="Open App" library="helpers">
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Enable Location Service</arg>
 </arguments>
-<status status="PASS" starttime="20210104 19:17:48.923" endtime="20210104 19:17:53.840"></status>
+<status status="PASS" starttime="20201226 17:32:25.609" endtime="20201226 17:32:30.680"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=net.booksy.customer:id/cancelLocation</arg>
 </arguments>
-<msg timestamp="20210104 19:17:53.841" level="INFO">Clicking element 'id=net.booksy.customer:id/cancelLocation'.</msg>
-<status status="PASS" starttime="20210104 19:17:53.840" endtime="20210104 19:17:54.717"></status>
+<msg timestamp="20201226 17:32:30.682" level="INFO">Clicking element 'id=net.booksy.customer:id/cancelLocation'.</msg>
+<status status="PASS" starttime="20201226 17:32:30.681" endtime="20201226 17:32:31.481"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Booksy lets you easily find services you love in your area.</arg>
 </arguments>
-<status status="PASS" starttime="20210104 19:17:54.717" endtime="20210104 19:17:54.843"></status>
+<status status="PASS" starttime="20201226 17:32:31.482" endtime="20201226 17:32:31.582"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=net.booksy.customer:id/man</arg>
 </arguments>
-<msg timestamp="20210104 19:17:54.844" level="INFO">Clicking element 'id=net.booksy.customer:id/man'.</msg>
-<status status="PASS" starttime="20210104 19:17:54.843" endtime="20210104 19:17:56.338"></status>
+<msg timestamp="20201226 17:32:31.584" level="INFO">Clicking element 'id=net.booksy.customer:id/man'.</msg>
+<status status="PASS" starttime="20201226 17:32:31.583" endtime="20201226 17:32:32.941"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Allow Booksy to access this device's location?</arg>
 </arguments>
-<status status="PASS" starttime="20210104 19:17:56.340" endtime="20210104 19:17:56.470"></status>
+<status status="PASS" starttime="20201226 17:32:32.942" endtime="20201226 17:32:33.014"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.android.packageinstaller:id/permission_deny_button</arg>
 </arguments>
-<msg timestamp="20210104 19:17:56.471" level="INFO">Clicking element 'id=com.android.packageinstaller:id/permission_deny_button'.</msg>
-<status status="PASS" starttime="20210104 19:17:56.470" endtime="20210104 19:17:56.519"></status>
+<msg timestamp="20201226 17:32:33.016" level="INFO">Clicking element 'id=com.android.packageinstaller:id/permission_deny_button'.</msg>
+<status status="PASS" starttime="20201226 17:32:33.015" endtime="20201226 17:32:33.081"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Your Booksy</arg>
 </arguments>
-<status status="PASS" starttime="20210104 19:17:56.520" endtime="20210104 19:17:57.026"></status>
+<status status="PASS" starttime="20201226 17:32:33.081" endtime="20201226 17:32:33.733"></status>
 </kw>
-<status status="PASS" starttime="20210104 19:17:48.923" endtime="20210104 19:17:57.026"></status>
-</kw>
-<kw name="Close Session" library="base" type="teardown">
+<kw name="Close Session" library="base1" type="teardown">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20210104 19:17:57.027" endtime="20210104 19:17:57.515"></status>
+<status status="PASS" starttime="20201226 17:32:33.734" endtime="20201226 17:32:34.221"></status>
 </kw>
-<status status="PASS" starttime="20210104 19:17:57.027" endtime="20210104 19:17:57.515"></status>
+<status status="PASS" starttime="20201226 17:32:33.734" endtime="20201226 17:32:34.221"></status>
 </kw>
-<status status="PASS" starttime="20210104 19:17:35.208" endtime="20210104 19:17:57.515" critical="yes"></status>
+<status status="PASS" starttime="20201226 17:32:13.847" endtime="20201226 17:32:34.222" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20210104 19:17:35.038" endtime="20210104 19:17:57.516"></status>
+<status status="PASS" starttime="20201226 17:32:13.674" endtime="20201226 17:32:34.223"></status>
 </suite>
 <statistics>
 <total>
@@ -102,7 +99,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Beardsearching">Beardsearching</stat>
+<stat pass="1" fail="0" id="s1" name="Booksy">Booksy</stat>
 </suite>
 </statistics>
 <errors>

@@ -2,18 +2,83 @@
 
 Documentation       Aqui teremos as Keywords helpers
 
+***Variables***
+
+${START}            COMEÇAR
+${HAMBURGUER}       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
+${NAV_VIEW}         id=io.qaninja.android.twp:id/navView 
+
 ***Keywords***
-Open App
-    Wait Until Page Contains                Enable Location Service         
+Get started
+    Wait Until Page Contains        ${START}      
+    Click Text                      ${START} 
 
-    Click Element                           id=net.booksy.customer:id/cancelLocation
-    Wait Until Page Contains                Booksy lets you easily find services you love in your area.
+Open Nav
+    Wait Until Element Is Visible   ${HAMBURGUER}      
 
-    Click Element                           id=net.booksy.customer:id/man
-    Wait Until Page Contains                Allow Booksy to access this device's location?
+    Click Element                   ${HAMBURGUER}
+    Wait Until Element Is Visible   ${NAV_VIEW}  
+Go To Login Form
+    Open Nav
 
-    Click Element                           id=com.android.packageinstaller:id/permission_deny_button
-    Wait Until Page Contains                Your Booksy
+    Click Text                  FORMS
+    Wait Until Page Contains    FORMS  
+
+    Click Text                  LOGIN
+    Wait Until Page Contains    Fala QA, vamos testar o login?
+
+Go To SingUp Form
+    Open Nav
+
+    Click Text                  FORMS
+    Wait Until Page Contains    FORMS  
+
+    Click Text                  CADASTRO
+    Wait Until Page Contains    Bem-vindo, crie sua conta.
 
 
 
+Go To Radion Buttons
+    Open Nav
+
+    Click Text                  INPUTS
+    Wait Until Page Contains    INPUTS
+
+    Click Text                  BOTÕES DE RADIO
+    Wait Until Page Contains    Escolha sua linguagem preferida
+
+Go To CheckBox
+    Open Nav
+
+    Click Text                  INPUTS
+    Wait Until Page Contains    INPUTS
+
+    Click Text                  CHECKBOX
+    Wait Until Page Contains    Marque as techs que usam Appium
+
+Go To Short Click
+    Open Nav
+
+    Click Text                  BOTÕES
+    Wait Until Page Contains    CLIQUE SIMPLES
+
+    Click Text                  CLIQUE SIMPLES
+    Wait Until Page Contains    Botão clique simples
+
+Go To Long Click
+    Open Nav
+
+    Click Text                  BOTÕES
+    Wait Until Page Contains    CLIQUE LONGO
+
+    Click Text                  CLIQUE LONGO
+    Wait Until Page Contains    Botão clique longo
+
+Go To Avengers List
+    Open Nav
+
+    Click Text                  AVENGERS
+    Wait Until Page Contains    AVENGERS
+
+    Click Text                  LISTA
+    Wait Until Page Contains    LISTA
