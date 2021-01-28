@@ -1,0 +1,5 @@
+"automationName": "UiAutomator2",
+  "platformName": "Android",
+  "deviceName": "Emulator",
+  "app": "C:\\Users\\CJ\\Testes\\app\\",
+  "udid": "emulator-5554"
