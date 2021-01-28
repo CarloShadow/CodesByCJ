@@ -1,0 +1,49 @@
+CONFIGURANDO CAPABILITIES PARA ANDROID
+
+automationName      UiAutomator2
+platformName        Android
+deviceName          Emulator        (No Android este campo é ignorado, porem é obrigatório)
+app                 (diretório do app que será testado + \nomedoarquivo.apk)
+udid                (digitar "adb devices" no terminal para achar valor)
+
+
+1)
+Guardando os logs dentro de uma pasta organizadamente:
+Digitar no terminal -> robot -d ./(nome da pasta) (nome do arquivo).robot
+
+2)
+Programar o appium para fazer um timeout definido em todas Wait Keywords
+
+***Text Cases***
+Deve acessar (Nome do que  deve acessar)
+    Set Appium timeout  (Tempo desejado)
+OBS: deve ser aplicado um tab no começo e antes do tempo
+
+
+3) Swipe By Percent
+
+X = VERTICAL
+Y = HORIZONTAL
+
+Swipe By Percent    começo x    começo y    fim x       fim y 
+
+Exemplo
+            X     Y
+Resolução 1080 X 1920
+
+começo 
+
+posição y = 650 % 1920
+y = 33.85
+
+posição x 992 % 1080
+X = 91.85
+
+fim
+
+posição y = 650 % 1920
+Y = 33.85
+
+posição x 580 % 1080
+
+X = 53.70
