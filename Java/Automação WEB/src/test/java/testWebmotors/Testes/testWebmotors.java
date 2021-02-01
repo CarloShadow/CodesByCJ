@@ -24,10 +24,10 @@ public class testWebmotors {
         page = new webmotorsPage(navegador);
     }
 
-   // @After
-    //public void teardown() {
-     //   navegador.quit();
-   // }
+    @After
+    public void teardown() {
+        navegador.quit();
+    }
 
     @Test
     public void deveValidarBuscaHONDACITY15DX16VFLEX4PAUTOMATICO() {
