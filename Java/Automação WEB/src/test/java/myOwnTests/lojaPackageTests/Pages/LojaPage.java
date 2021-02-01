@@ -55,6 +55,4 @@ public class LojaPage {
     public String obterTextoTshirt() {
         return dsl.receberTexto(By.xpath("//h1[@class='page-heading product-listing']//span[@class='cat-name']"));
     }
-    /******************** CADASTRO ****************** CADASTRO *************************/
-
 }
