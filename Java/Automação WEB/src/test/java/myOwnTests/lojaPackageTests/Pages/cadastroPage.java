@@ -2,15 +2,13 @@ package myOwnTests.lojaPackageTests.Pages;
 
 import myOwnTests.lojaPackageTests.DSL.dslCadastro;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
 
 public class cadastroPage {
 
     private final dslCadastro dsl;
 
-    public cadastroPage(WebDriver navegador) {
-        dsl = new dslCadastro(navegador);
+    public cadastroPage() {
+        dsl = new dslCadastro();
     }
 
     public void setSignIn() {
@@ -33,7 +31,7 @@ public class cadastroPage {
         return dsl.receberTexto(By.tagName("h3"));
     }
 
-    public void setCliqueRadioSexo() {
+    public void setCliqueRadioMasculino() {
         dsl.clicar(By.id("id_gender1"));
     }
 

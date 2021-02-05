@@ -1,23 +1,24 @@
 package myOwnTests.lojaPackageTests.Tests;
 
 import myOwnTests.lojaPackageTests.DSL.dslLoja;
-import myOwnTests.lojaPackageTests.Suporte.webLoja;
 import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+
+import static myOwnTests.globalSuporte.webNavegador.getNavegador;
 
 public class testProcurarRoupas {
 
-    private WebDriver navegador;
     private dslLoja dsl;
 
     @Before
     public void setUp() {
-        navegador = webLoja.createEdge2();
-        dsl = new dslLoja(navegador);
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\CJ\\webdrivers\\msedgedriver.exe");
+        getNavegador().get("http://automationpractice.com/index.php");
+        dsl = new dslLoja();
     }
-
+    @Test
     public void deveProcurarPorRoupas() {
 
         //Deve clicar no botão "Sign in" e validar

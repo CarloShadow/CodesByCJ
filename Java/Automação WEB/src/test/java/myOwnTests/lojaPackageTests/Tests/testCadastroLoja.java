@@ -2,51 +2,47 @@ package myOwnTests.lojaPackageTests.Tests;
 
 import myOwnTests.lojaPackageTests.DSL.dslCadastro;
 import myOwnTests.lojaPackageTests.Pages.cadastroPage;
-import myOwnTests.lojaPackageTests.Suporte.webLoja;
-import org.easetech.easytest.annotation.DataLoader;
-import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import static myOwnTests.globalSuporte.webNavegador.getNavegador;
+import static myOwnTests.globalSuporte.webNavegador.killDriver;
 
-@RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths = "testCadastroLoja.csv")
 public class testCadastroLoja {
-    private WebDriver navegador;
+
     private dslCadastro dsl;
     private cadastroPage page;
 
     @Before
     public void setUp() {
-        navegador = webLoja.createEdge2();
-        dsl = new dslCadastro(navegador);
-        page = new cadastroPage(navegador);
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\CJ\\webdrivers\\msedgedriver.exe");
+        getNavegador().get("http://automationpractice.com/index.php");
+        dsl = new dslCadastro();
+        page = new cadastroPage();
     }
 
     @After
     public void teardown() {
-        navegador.quit();
+        killDriver();
     }
 
     @Test
     public void testdeveFazerOCadastro() {
 
         //Deve clicar no botão "Sign in" e validar
-        dsl.clicar(By.linkText("Sign in"));
+        page.setSignIn();
         Assert.assertEquals("Email address", page.obterTextoEmailAddress());
 
         // Digtando e-mail, clicando no botao de cadastro e validando
-        dsl.escreverCssSelector("input[id='email_create']", "fabiana9444@uorak.com");
-        dsl.clicar(By.id("SubmitCreate"));
-        Assert.assertEquals("CREATE AN ACCOUNT", dsl.receberTexto(By.tagName("h3")));
+        page.setEmailCadastro();
+        page.setCliqueBotaoCadastro();
+        Assert.assertEquals("CREATE AN ACCOUNT", page.setObterTextoCreatAnAnccount());
 
         // Clicando radio
         dsl.clicar(By.id("id_gender1"));
-        Assert.assertTrue(dsl.receberValorRadio("id_gender1"));
+        Assert.assertTrue(page.setObterCliqueRadio());
 
         // Digitando primeiro nome e validando
         dsl.escreverById("customer_firstname", "Carl");
@@ -100,7 +96,7 @@ public class testCadastroLoja {
         dsl.escreverById("phone_mobile", "213-555-0113");
         Assert.assertEquals("213-555-0113", dsl.receberValorDoCampo("phone_mobile"));
 
-        // Clicar no botão, cadastrar e validar
+        // Clicar no botão e cadastrar
         //dsl.clicar(By.id("submitAccount"));
     }
 }

@@ -2,14 +2,13 @@ package myOwnTests.lojaPackageTests.Pages;
 
 import myOwnTests.lojaPackageTests.DSL.dslLoja;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class LojaPage {
 
     private final dslLoja dsl;
 
-    public LojaPage(WebDriver navegador) {
-        dsl = new dslLoja(navegador);
+    public LojaPage() {
+        dsl = new dslLoja();
     }
 
     public void setSignIn() {
