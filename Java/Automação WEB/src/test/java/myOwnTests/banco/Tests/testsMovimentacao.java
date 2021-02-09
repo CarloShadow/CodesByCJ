@@ -8,6 +8,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import static myOwnTests.banco.Pages.Propriedades.NOME_CONTA_ALTERADA;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class testsMovimentacao extends BaseTest {
 
@@ -39,7 +41,7 @@ public class testsMovimentacao extends BaseTest {
         Assert.assertEquals("Prestação do carro", page.obterTextoDescricao());
         Assert.assertEquals("Toretto", page.obterTextoInteressado());
         Assert.assertEquals("800", page.obterTextoValor());
-        Assert.assertEquals("Conta Bill Gates", page.obterValorComboContas());
+        Assert.assertEquals(NOME_CONTA_ALTERADA, page.obterValorComboContas());
 
         page.setClickSalvarMovimentacao();
         Assert.assertEquals("Movimentação adicionada com sucesso!", page.obterTextoMovimentacaoAddSucesso());
@@ -83,7 +85,7 @@ public class testsMovimentacao extends BaseTest {
         Assert.assertEquals("Prestação do carro", page.obterTextoDescricao());
         Assert.assertEquals("Toretto", page.obterTextoInteressado());
         Assert.assertEquals("800", page.obterTextoValor());
-        Assert.assertEquals("Conta Bill Gates", page.obterValorComboContas());
+        Assert.assertEquals(NOME_CONTA_ALTERADA, page.obterValorComboContas());
 
         // Clicando em salvar movimentação e validando mensagem de erro
         page.setClickSalvarMovimentacao();

@@ -2,6 +2,9 @@ package myOwnTests.banco.Pages;
 
 import org.openqa.selenium.By;
 
+import static myOwnTests.banco.Pages.Propriedades.NOME_CONTA_ADD;
+import static myOwnTests.banco.Pages.Propriedades.NOME_CONTA_ALTERADA;
+
 public class BasePage {
 
     private final DSL dsl;
@@ -46,8 +49,8 @@ public class BasePage {
         return dsl.obterTexto(By.xpath("//label[@for='nome']"));
     }
 
-    public void setEscreverConta1() {
-        dsl.escrever(By.id("nome"), "conta1");
+    public void setEscreverContaNova() {
+        dsl.escrever(By.id("nome"), NOME_CONTA_ADD);
     }
 
     public String obterTextoCampoAddConta() {
@@ -70,12 +73,12 @@ public class BasePage {
         return dsl.obterTexto(By.xpath("//th[.='Conta']"));
     }
 
-    public void setClickEditarContaMoscando() {
-        dsl.clicarBotaoBy(By.xpath("//a[@href='/editarConta?id=399654']//span[@class='glyphicon glyphicon-edit']"));
+    public void setClickEditarConta() {
+        dsl.clicarBotaoBy(By.className("glyphicon glyphicon-edit"));
     }
 
     public void setEscrevendoNovoNome() {
-        dsl.escrever(By.id("nome"), "Conta Alterada");
+        dsl.escrever(By.id("nome"), NOME_CONTA_ALTERADA);
     }
 
     public void obterTextoNovoNome() {
@@ -87,7 +90,7 @@ public class BasePage {
     }
 
     public void setEscreverContaExistente() {
-        dsl.escrever(By.id("nome"), "Conta Existente");
+        dsl.escrever(By.id("nome"), NOME_CONTA_ALTERADA);
     }
 
     public String obterTextoJaExisteConta() {
@@ -123,7 +126,7 @@ public class BasePage {
     }
 
     public void setEscolherOpcaoDaConta() {
-        dsl.selecionarCombo("conta", "Conta Bill Gates");
+        dsl.selecionarCombo("conta", NOME_CONTA_ALTERADA);
     }
 
     public String obterTextoDataPagaemento() {
@@ -218,5 +221,10 @@ public class BasePage {
     public void setClicarExcluirConta(String string) {
         dsl.obterCelula("Conta", string, "Ações", "tabelaContas")
                 .findElement(By.xpath(".//span[@class='glyphicon glyphicon-remove-circle']")).click();
+    }
+
+    public void setClicarAlterarConta(String string) {
+        dsl.obterCelula("Conta", string, "Ações", "tabelaContas")
+                .findElement(By.xpath(".//span[@class='glyphicon glyphicon-edit']")).click();
     }
 }

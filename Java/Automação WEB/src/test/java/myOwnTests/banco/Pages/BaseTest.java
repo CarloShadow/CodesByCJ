@@ -33,7 +33,7 @@ public class BaseTest {
 
     @After
     public void finaliza() throws IOException {
-        String screenshotArquivo = ("/Users/CJ/Codes/Java/Automação WEB/src/main/java/Sr_Barriga/screeshot/" +
+        String screenshotArquivo = ("/Users/CJ/Codes/Java/Automação WEB/src/test/java/myOwnTests/banco/screenshot/" +
                 generator.dataHoraParaArquivo() + test.getMethodName() + ".png");
         screenshot.tirar(getDriver(), screenshotArquivo);
         if(Propriedades.FECHAR_BROWSER) {
@@ -41,3 +41,4 @@ public class BaseTest {
         }
     }
 }
+

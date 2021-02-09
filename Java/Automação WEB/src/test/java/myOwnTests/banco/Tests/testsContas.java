@@ -8,6 +8,9 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import static myOwnTests.banco.Pages.Propriedades.NOME_CONTA_ADD;
+import static myOwnTests.banco.Pages.Propriedades.NOME_CONTA_ALTERADA;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class testsContas extends BaseTest {
 
@@ -27,8 +30,8 @@ public class testsContas extends BaseTest {
         Assert.assertEquals("Nome", page.obterTextoNome());
 
         // Inserindo conta
-        page.setEscreverConta1();
-        Assert.assertEquals("conta1", page.obterTextoCampoAddConta());
+        page.setEscreverContaNova();
+        Assert.assertEquals(NOME_CONTA_ADD, page.obterTextoCampoAddConta());
         page.setClickSalvarConta();
         Assert.assertEquals("Conta adicionada com sucesso!", page.obterTextoContaAdicionadaSucesso());
 
@@ -43,7 +46,7 @@ public class testsContas extends BaseTest {
         Assert.assertEquals("Conta", page.obterTextoConta());
 
         // Editando Conta
-        page.setClickEditarContaMoscando();
+        page.setClicarAlterarConta(NOME_CONTA_ADD);
         Assert.assertEquals("Nome", page.obterTextoNome());
         page.setEscrevendoNovoNome();
         page.obterTextoNovoNome();
@@ -62,7 +65,7 @@ public class testsContas extends BaseTest {
 
         // Inserindo conta ja existente
         page.setEscreverContaExistente();
-        Assert.assertEquals("Conta Existente", page.obterTextoCampoAddConta());
+        Assert.assertEquals(NOME_CONTA_ALTERADA, page.obterTextoCampoAddConta());
         page.setClickSalvarConta();
         Assert.assertEquals("Já existe uma conta com esse nome!", page.obterTextoJaExisteConta());
     }

@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static myOwnTests.banco.Pages.Propriedades.NOME_CONTA_ALTERADA;
+
 public class testExlcuirContaComMovimentacao extends BaseTest {
 
     private BasePage page;
@@ -24,7 +26,7 @@ public class testExlcuirContaComMovimentacao extends BaseTest {
         Assert.assertEquals("Conta", page.obterTextoConta());
 
         // Clicando em excluir conta com movimentação
-        page.setClicarExcluirConta("Conta Bill Gates");
+        page.setClicarExcluirConta(NOME_CONTA_ALTERADA);
         Assert.assertEquals("Conta em uso na movimentações", page.obterTextoContaEmUso());
     }
 }
