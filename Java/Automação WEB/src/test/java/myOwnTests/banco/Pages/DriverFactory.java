@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class DriverFactory {
 
@@ -21,6 +23,7 @@ public class DriverFactory {
                 case CHROME: navegador = new ChromeDriver(); break;
             }
             //navegador.manage().window().setSize(new Dimension(1200, 765));
+            navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
         return navegador;
     }

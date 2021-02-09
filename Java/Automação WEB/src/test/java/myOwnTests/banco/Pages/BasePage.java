@@ -205,4 +205,18 @@ public class BasePage {
     public String obterTextoMovimentacaoExlcuidaSucesso() {
         return dsl.obterTexto(By.xpath("//div[@class='alert alert-success']"));
     }
+
+
+    public String obterTextoContaEmUso() {
+        return dsl.obterTexto(By.xpath("//div[@class='alert alert-danger']"));
+    }
+
+    public String obterSaldoConta(String nome) {
+        return dsl.obterCelula("Conta", nome, "Saldo", "tabelaSaldo").getText();
+    }
+
+    public void setClicarExcluirConta(String string) {
+        dsl.obterCelula("Conta", string, "Ações", "tabelaContas")
+                .findElement(By.xpath(".//span[@class='glyphicon glyphicon-remove-circle']")).click();
+    }
 }

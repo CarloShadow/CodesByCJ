@@ -223,4 +223,20 @@ public class DSL {
         }
         return idColuna;
     }
+
+    public WebElement obterCelula(String colunaBusca, String valor, String colunaBotao, String idTabela){
+        //procurar coluna do registro
+        WebElement tabela = getDriver().findElement(By.xpath("//*[@id='"+idTabela+"']"));
+        int idColuna = obterIndiceColuna(colunaBusca, tabela);
+
+        //encontrar a linha do registro
+        int idLinha = obterIndiceLinha(valor, tabela, idColuna);
+
+        //procurar coluna do botao
+        int idColunaBotao = obterIndiceColuna(colunaBotao, tabela);
+
+        //clicar no botao da celula encontrada
+        WebElement celula = tabela.findElement(By.xpath(".//tr["+idLinha+"]/td["+idColunaBotao+"]"));
+        return celula;
+    }
 }
