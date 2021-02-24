@@ -1,8 +1,7 @@
 package myOwnTests.OLX.Tests;
 
-import cursoJulioDeLima.suporte.Web;
 import myOwnTests.OLX.Pages.BasePage;
-import myOwnTests.OLX.Pages.web;
+import myOwnTests.OLX.Suporte.web;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,7 +40,7 @@ public class pesquisaImoveisTest {
         Assert.assertEquals("200.000,00", page.obterTextoValorMax());
         page.clickPesquisaValores();
 
-        // Definindo tamanho da área do imovel
+        // Definindo tamanho da área do imovel e validando
         page.selecionarComboValorAreaMin();
         page.selecionarComboValorAreaMax();
         Assert.assertEquals("90", page.obterValorComboAreaMin());

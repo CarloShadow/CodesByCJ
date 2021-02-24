@@ -1,4 +1,4 @@
-package myOwnTests.OLX.Pages;
+package myOwnTests.OLX.Suporte;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
