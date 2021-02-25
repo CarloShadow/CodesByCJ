@@ -1,35 +1,9 @@
 package myOwnTests.OLX.Pages;
 
+import myOwnTests.OLX.Suporte.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
-public class BasePage {
-
-    private final DSL dsl;
-
-    public BasePage(WebDriver navegador) {
-        dsl = new DSL(navegador);
-    }
-    public String obterTextoImoveis() {
-        return dsl.obterTexto(By.xpath("//small[.='Imóveis']"));
-    }
-
-    public void clickImoveis() {
-        dsl.click(By.xpath("//small[.='Imóveis']"));
-    }
-
-    public String obterTextoImoveis1() {
-        return dsl.obterTexto(By.xpath("//div[@class='sc-1i4l3ts-1 dKzxhF']/span"));
-    }
-
-    public void clickCasasEAps() {
-        dsl.click(By.xpath("//span[.='Venda - casas e apartamentos']"));
-    }
-
-    public void clickCheckCasas() {
-        dsl.click(By.xpath("//body/div[@id='root']/div[@id='content']/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]" +
-                "/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/ul[1]/li[2]/label[1]/div[1]/input[1]"));
-    }
+public class olxPage extends BasePage {
 
     public void escreverPrecoMin() {
         dsl.escrever(By.xpath("//input[@placeholder='Min.']"), "0");
@@ -37,11 +11,6 @@ public class BasePage {
 
     public void escreverPrecoMax() {
         dsl.escrever(By.xpath("//input[@placeholder='Máx.']"), "200000");
-    }
-
-    public boolean obterValorCheckCasas() {
-        return dsl.isCheckMarcado(By.xpath("//body/div[@id='root']/div[@id='content']/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]" +
-                "/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/ul[1]/li[2]/label[1]/div[1]/input[1]"));
     }
 
     public String obterTextoValorMin() {
