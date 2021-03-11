@@ -18,7 +18,7 @@ public class BaseTest {
 
     @Before
     public void login() {
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\CJ\\webdrivers\\msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\CJ\\WebDrivers1\\msedgedriver.exe");
         getDriver().get("https://seubarriga.wcaquino.me/logout");
         BasePage page = new BasePage();
 
