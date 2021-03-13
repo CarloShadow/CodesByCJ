@@ -11,11 +11,16 @@ public class Primeiro {
     public void deveFazerTestesAleatorios() {
         given()
         .when()
-            .get("https://gorest.co.in/public-api/comments/34")
+            .get("https://jsonplaceholder.typicode.com/users/8")
         .then()
             .statusCode(200)
-            .body("id", is(34))
-            .body("name", containsString("Sweta Reddy"))
+            .body("id", is(8))
+            .body("name", containsString("Nicholas"))
+            .body("username", containsString("Maxime_Nienow"))
+            .body("email", containsString("Sherwood@rosamond.me"))
+            .body("address.street",is("Ellsworth Summit"))
+            .body("address.city", is("Aliyaview"))
+            .body("company.name", is("Abernathy Group"))
 
         ;
     }
