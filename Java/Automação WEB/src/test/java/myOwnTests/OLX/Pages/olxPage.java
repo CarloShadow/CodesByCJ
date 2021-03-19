@@ -1,6 +1,5 @@
 package myOwnTests.OLX.Pages;
 
-import myOwnTests.OLX.Suporte.BasePage;
 import org.openqa.selenium.By;
 
 public class olxPage extends BasePage {

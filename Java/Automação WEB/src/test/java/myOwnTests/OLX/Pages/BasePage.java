@@ -1,5 +1,6 @@
-package myOwnTests.OLX.Suporte;
+package myOwnTests.OLX.Pages;
 
+import myOwnTests.OLX.Suporte.DSL;
 
 public class BasePage {
 

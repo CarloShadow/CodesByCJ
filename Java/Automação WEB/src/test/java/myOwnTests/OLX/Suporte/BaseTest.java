@@ -1,10 +1,9 @@
 package myOwnTests.OLX.Suporte;
 
+import myOwnTests.OLX.Pages.ImoveisPage;
 import org.junit.Assert;
 import org.junit.Before;
-
 import java.util.concurrent.TimeUnit;
-
 import static myOwnTests.OLX.Suporte.DriverFactory.getDriver;
 
 

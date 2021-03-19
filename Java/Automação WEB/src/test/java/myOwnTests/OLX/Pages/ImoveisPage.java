@@ -1,4 +1,4 @@
-package myOwnTests.OLX.Suporte;
+package myOwnTests.OLX.Pages;
 
 import org.openqa.selenium.By;
 import static myOwnTests.OLX.Suporte.DriverFactory.getDriver;
