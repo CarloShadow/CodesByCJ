@@ -32,6 +32,6 @@ public class FormsFillingTest extends BaseTest {
         Assert.assertEquals("Stark Industries", page.getCompanyText());
         Assert.assertEquals("12345678", page.getMobilePhoneText());
 
-        
+
     }
 }
