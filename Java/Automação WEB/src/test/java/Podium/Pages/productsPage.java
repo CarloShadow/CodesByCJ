@@ -59,36 +59,36 @@ public class ProductsPage extends BasePage1 {
 
     /*************************************** TEAMCHAT SETTINGS ***************************************/
 
-    public String getTeamchatButtonText() {
+    public String getTeamChatButtonText() {
         return page_.getTexts(By.xpath("//span[contains(text(),'Teamchat')]"));
     }
 
-    public void setClickTeamchatButton() {
+    public void setClickTeamChatButton() {
         page_.buttonClick(By.xpath("//span[contains(text(),'Teamchat')]"));
     }
 
-    public String getTeamchatPageText() {
+    public String getTeamChatPageText() {
         return page_.getTexts(By.xpath("//p[contains(text(),'Teamchat')]"));
     }
 
     /*************************************** VIDEOCHAT SETTINGS ***************************************/
 
-    public String getVideochatButtonText() {
+    public String getVideoChatButtonText() {
         return page_.getTexts(By.xpath("//span[contains(text(),'Videochat')]"));
     }
 
-    public void setClickVideochatButton() {
+    public void setClickVideoChatButton() {
         page_.buttonClick(By.xpath("//span[contains(text(),'Videochat')]"));
     }
 
-    public String getVideochatPageText() {
+    public String getVideoChatPageText() {
         return page_.getTexts(By.xpath(" //body/div[@id='page']/div[@id='content']/div[@id='primary']/main[@id='main']" +
                 "/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]"));
     }
 
     /*************************************** WEBCHAT SETTINGS ***************************************/
 
-    public String getWebchatButtonText() {
+    public String getWebChatButtonText() {
         return page_.getTexts(By.xpath("//span[contains(text(),'Webchat')]"));
     }
 
@@ -96,7 +96,7 @@ public class ProductsPage extends BasePage1 {
         page_.buttonClick(By.xpath("//span[contains(text(),'Webchat')]"));
     }
 
-    public String getWebchatPageText() {
+    public String getWebChatPageText() {
         return page_.getTexts(By.xpath("//body/div[@id='page']/div[@id='content']/div[@id='primary']/main[@id='main']" +
                 "/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]"));
     }

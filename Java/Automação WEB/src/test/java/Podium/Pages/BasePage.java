@@ -1,12 +1,8 @@
 package Podium.Pages;
 
-import com.sun.xml.bind.v2.model.core.ID;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
-import javax.persistence.Id;
-
 import static Podium.Suport.DriverFactory.getDriver;
 
 public class BasePage {
@@ -29,6 +25,7 @@ public class BasePage {
         getDriver().findElement(By.id(id)).clear();
         getDriver().findElement(By.id(id)).sendKeys(texto);
     }
+    
     public String getFieldValue(String id_campo) {
         return getDriver().findElement(By.id(id_campo)).getAttribute("value");
     }
