@@ -1,12 +1,9 @@
 package Podium.Pages;
 
-import Podium.Suport.BasePage;
-
-public class basePage_ {
-
+public class BasePage1 {
     protected final BasePage page_;
 
-    public basePage_() {
+    public BasePage1() {
         page_ = new BasePage();
     }
 }

@@ -2,7 +2,7 @@ package Podium.Pages;
 
 import org.openqa.selenium.By;
 
-public class productsPage extends basePage_ {
+public class ProductsPage extends BasePage1 {
 
     /*************************************** PRODUCTS SETTINGS ***************************************/
 
@@ -132,11 +132,11 @@ public class productsPage extends basePage_ {
     /*************************************** FREE VERSION SETTINGS ***************************************/
 
     public String getFreeVersionButtonText() {
-        return page_.getTexts(By.xpath("//body[1]/div[1]/nav[1]/div[2]/div[1]/ul[1]/li[1]/ul[1]/li[9]/a[1]/div[1]/p[1]"));
+        return page_.getTexts(By.id("submenu-starter-button"));
     }
 
     public void setClickFreeVersionButton() {
-        page_.buttonClick(By.xpath("//body[1]/div[1]/nav[1]/div[2]/div[1]/ul[1]/li[1]/ul[1]/li[9]/a[1]/div[1]/p[1]"));
+        page_.buttonClick(By.id("submenu-starter-button"));
     }
 
     public String getPodiumStarterPageText() {

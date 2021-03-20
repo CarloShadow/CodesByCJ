@@ -1,6 +1,5 @@
 package Podium.Suport;
 
-import Podium.Pages.Link;
 import org.junit.Before;
 import java.util.concurrent.TimeUnit;
 import static Podium.Suport.DriverFactory.getDriver;

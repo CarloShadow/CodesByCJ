@@ -1,9 +1,11 @@
-package Podium.Pages;
+package Podium.Suport;
 
+
+import Podium.Pages.BasePage1;
 
 import static Podium.Suport.DriverFactory.getDriver;
 
-public class Link extends basePage_{
+public class Link extends BasePage1 {
 
     public void acessHomePage() {
 

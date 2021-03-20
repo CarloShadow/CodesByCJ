@@ -1,14 +1,14 @@
 package Podium.Test;
 
-import Podium.Pages.productsPage;
+import Podium.Pages.ProductsPage;
 import Podium.Suport.BaseTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class productsTest extends BaseTest {
+public class ProductsTest extends BaseTest {
 
-    productsPage page = new productsPage();
+    ProductsPage page = new ProductsPage();
 
     @Before
     public void productsStarting() {
